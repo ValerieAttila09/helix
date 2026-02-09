@@ -66,8 +66,8 @@ const COMPANY_SUBMENU = [
 const NAVBAR_MENU = [
   { label: "Product", dropdown: true, subMenu: PRODUCT_SUBMENU },
   { label: "Solutions", dropdown: true, subMenu: SOLUTIONS_SUBMENU },
-  { label: "Docs", dropdown: false },
-  { label: "Pricing", dropdown: false },
+  { label: "Docs", dropdown: false, href: "/docs" },
+  { label: "Pricing", dropdown: false, href: "/pricing" },
   { label: "Company", dropdown: true, subMenu: COMPANY_SUBMENU },
 ]
 
