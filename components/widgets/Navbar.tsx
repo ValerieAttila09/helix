@@ -86,12 +86,12 @@ const Navbar = () => {
   };
 
   return (
-    <div ref={navbarWidgetRef} onMouseLeave={closeNavbar} className="fixed top-0 z-50 inset-x-0 w-full h-[56px] bg-neutral-100 border-b border-neutral-300 overflow-hidden">
+    <div ref={navbarWidgetRef} onMouseLeave={closeNavbar} className="fixed top-0 z-50 inset-x-0 w-full h-[56px] bg-transparent backdrop-blur-sm border-b border-neutral-500/50 overflow-hidden">
       <div className="w-full space-y-4">
         <div className="w-full h-auto flex items-start py-2 px-8 justify-between">
           <div className="flex items-center gap-10 sm:gap-14">
             <div className="">
-              <h1 className="text-2xl font-bold text-foreground">helix</h1>
+              <h1 className="text-2xl font-bold text-background">helix</h1>
             </div>
             <div className="flex items-center gap-4">
               {NAVBAR_MENU.map((data: NavMenuItem, i) => {
@@ -102,9 +102,9 @@ const Navbar = () => {
                       handleSubmenuHover(data.label);
                     }
                   }} className="cursor-pointer p-2 flex items-center gap-2 group transition-all">
-                    <span className="text-md font-normal text-neutral-700 group-hover:text-foreground">{data.label}</span>
+                    <span className="text-md font-normal text-neutral-200 group-hover:text-background">{data.label}</span>
                     {data.dropdown && (
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-3 group-hover:text-foreground rotate-90 text-neutral-700 transition-transform">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-3 group-hover:text-background rotate-90 text-neutral-200 transition-transform">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                       </svg>
                     )}
@@ -114,10 +114,10 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <Button variant={'default'} className='rounded-full'>
-              <span className="text-sm font-normal">Login</span>
+            <Button variant={'ghost'} className='rounded-none group transition-all'>
+              <span className="text-sm text-neutral-200 font-normal group-hover:text-foreground transition-all">Login</span>
             </Button>
-            <Button variant={'outline'} className='rounded-full'>
+            <Button variant={'outline'} className='rounded-none'>
               <span className="text-sm font-normal">Sign Up</span>
             </Button>
           </div>
@@ -137,7 +137,7 @@ const Navbar = () => {
                 <div className="grid grid-cols-2 gap-20 pb-4">
                   {data.subMenu.map((section: SubmenuSection, sectionIdx) => (
                     <div key={`section-${sectionIdx}`}>
-                      <h3 className="text-xs font-medium text-neutral-600 mb-4">{section.title}</h3>
+                      <h3 className="text-xs font-medium text-neutral-500 mb-4">{section.title}</h3>
                       <div className="space-y-3">
                         {section.menu.map((item: SubmenuItem, itemIdx) => (
                           <a
@@ -146,10 +146,10 @@ const Navbar = () => {
                             className="block group cursor-pointer hover:opacity-80 transition-opacity"
                           >
                             <div>
-                              <p className="text-lg font-normal text-foreground group-hover:text-blue-700 transition-all">
+                              <p className="text-lg font-normal text-background group-hover:text-blue-700 transition-all">
                                 {item.label}
                               </p>
-                              <p className="text-xs font-thin text-neutral-500 mt-1">
+                              <p className="text-xs font-thin text-neutral-400 mt-1">
                                 {item.description}
                               </p>
                             </div>

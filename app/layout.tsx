@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${googleSans.className} relative antialiased`}
+        className={`${googleSans.className} relative antialiased bg-foreground`}
       >
         <Navbar />
         <div className="">
