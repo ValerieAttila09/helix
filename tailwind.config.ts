@@ -1,9 +1,8 @@
 import type { Config } from "tailwindcss";
 import tailwindcssAnimate from "tailwindcss-animate";
-import twAnimateCss from "tw-animate-css";
 
 const config = {
-  darkMode: ["class"],
+  darkMode: ["class", ""],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -29,14 +28,24 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "marquee": {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        "marquee-vertical": {
+          "0%": { transform: "translateY(0%)" },
+          "100%": { transform: "translateY(-100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "marquee": "marquee var(--duration, 40s) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration, 40s) linear infinite",
       },
     },
   },
-  plugins: [tailwindcssAnimate, twAnimateCss],
+  plugins: [tailwindcssAnimate],
 } satisfies Config;
 
 export default config;
