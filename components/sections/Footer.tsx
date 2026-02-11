@@ -104,7 +104,7 @@ const Footer = () => {
             &copy; 2025 helix.com
           </p>
           <p className='text-neutral-500 text-sm'>
-            Made in the USA 🇺🇸
+            Made by Valerie.
           </p>
         </div>
       </div>

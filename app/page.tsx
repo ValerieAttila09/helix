@@ -1,4 +1,5 @@
 import AboutSection from '@/components/sections/About';
+import FAQSection from '@/components/sections/FAQ';
 import Features from '@/components/sections/Features';
 import Footer from '@/components/sections/Footer';
 import HeroSection from '@/components/sections/Hero';
@@ -10,6 +11,7 @@ const page = () => {
       <HeroSection />
       <AboutSection />
       <Features />
+      <FAQSection />
       <Footer />
     </div>
   );

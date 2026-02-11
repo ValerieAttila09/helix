@@ -96,4 +96,13 @@ const MAIN_FEATURES = [
   },
 ];
 
-export { NAVBAR_MENU, MAIN_FEATURES };
+const FAQS_DATA: FAQItem[] = [
+  { q: 'Is there a free version?', a: 'Yes — we offer a free tier with limited features so you can try the product.' },
+  { q: 'What apps can I integrate?', a: 'You can integrate with popular apps using our connectors and webhooks.' },
+  { q: 'How does the AI work?', a: 'Our AI analyzes your input and generates suggestions using trained models.' },
+  { q: 'Can I use this with a team?', a: 'Yes — invite teammates, manage roles, and collaborate in shared workspaces.' },
+  { q: 'Is my data safe?', a: 'We use industry-standard encryption and access controls to protect your data.' },
+  { q: 'How do I manage my subscription?', a: 'Visit the billing page in your account settings to update or cancel subscriptions.' },
+];
+
+export { NAVBAR_MENU, MAIN_FEATURES, FAQS_DATA };
