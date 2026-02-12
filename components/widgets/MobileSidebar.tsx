@@ -63,14 +63,12 @@ const MobileSidebar = ({ isOpen, onClose }: MobileSidebarProps) => {
 
   return (
     <>
-      {/* Overlay */}
       <div
         ref={overlayRef}
         onClick={onClose}
         className="fixed inset-0 bg-black/50 z-40 opacity-0 pointer-events-none"
       />
 
-      {/* Sidebar */}
       <div
         ref={sidebarRef}
         className="fixed top-14 left-0 h-screen w-64 bg-black border-r border-neutral-700 z-50 overflow-y-auto translate-x-full"

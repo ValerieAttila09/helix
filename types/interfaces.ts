@@ -12,5 +12,6 @@ export interface SubmenuSection {
 export interface NavMenuItem {
   label: string;
   dropdown: boolean;
+  href?: string;
   subMenu?: SubmenuSection[];
 }
