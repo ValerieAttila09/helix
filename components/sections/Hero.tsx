@@ -37,18 +37,18 @@ const HeroSection = () => {
           rotation={30}
         /> */}
         <div className="absolute inset-x-0 bottom-0 z-5 background-transparent">
-          <div className="max-w-3/5 p-20 space-y-6">
+          <div className="w-full px-4 sm:px-6 md:px-8 lg:px-20 lg:max-w-5xl py-8 sm:py-12 md:py-16 lg:py-20 space-y-6">
             <div className="flex items-center gap-2">
               <Triangle className='size-3 text-red-500 rotate-90' fill='#fb2c36' />
-              <span className="text-neutral-500 font-medium text-md">HELIX: A DATABASE COMPANY</span>
+              <span className="text-neutral-500 font-medium text-xs sm:text-sm md:text-base">HELIX: A DATABASE COMPANY</span>
             </div>
-            <h1 className="text-6xl font-normal text-background">Lorem ipsum, dolor sit amet consectetur adipisicing.</h1>
-            <div className="flex items-center gap-2">
-              <Button variant={'outline'} className='rounded-none'>
-                <span className="text-md font-normal">Get Started</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-background leading-tight">Lorem ipsum, dolor sit amet consectetur adipisicing.</h1>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-2">
+              <Button variant={'outline'} className='rounded-none w-full sm:w-auto'>
+                <span className="text-sm sm:text-base md:text-md font-normal">Get Started</span>
               </Button>
-              <Button variant={'ghost'} className='rounded-none group transition-all'>
-                <span className="text-md text-neutral-200 font-normal group-hover:text-foreground transition-all">Read the docs</span>
+              <Button variant={'ghost'} className='rounded-none w-full sm:w-auto group transition-all'>
+                <span className="text-sm sm:text-base md:text-md text-neutral-200 font-normal group-hover:text-foreground transition-all">Read the docs</span>
               </Button>
             </div>
           </div>
@@ -56,8 +56,8 @@ const HeroSection = () => {
             <Marquee className="[--duration:30s]">
               {Icons.map((data, i) => {
                 return (
-                  <div key={data.label} className="p-4">
-                    <Image src={data.icon} alt={data.label} className='h-8 w-auto' width={56} height={56}/>
+                  <div key={data.label} className="p-2 sm:p-4">
+                    <Image src={data.icon} alt={data.label} className='h-6 sm:h-8 w-auto' width={56} height={56} />
                   </div>
                 );
               })}

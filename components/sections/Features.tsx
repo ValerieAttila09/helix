@@ -11,27 +11,27 @@ import { StripedPattern } from '../magicui/striped-pattern';
 const Features = () => {
 
   return (
-    <div className='w-full bg-black min-h-screen px-[6%] sm:px-[8%] md:px-[12%] py-20 space-y-12'>
-      <div className='mb-16'>
-        <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>Security and speed,<br />automatically configured</h2>
-        <p className='text-neutral-400 text-lg max-w-2xl'>Cloud provides enterprise-grade security and performance out of the box. No need to configure firewalls, load balancers, or caching layers — it's all done for you.</p>
+    <div className='w-full bg-black min-h-screen px-4 sm:px-6 md:px-[8%] lg:px-[12%] py-12 sm:py-16 md:py-20 space-y-12'>
+      <div className='mb-8 sm:mb-12 md:mb-16'>
+        <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6'>Security and speed,<br />automatically configured</h2>
+        <p className='text-neutral-400 text-sm sm:text-base md:text-lg max-w-2xl'>Cloud provides enterprise-grade security and performance out of the box. No need to configure firewalls, load balancers, or caching layers — it's all done for you.</p>
       </div>
 
-      <div className="grid grid-cols-2 gap-12">
-        <div className="h-[600px] relative overflow-hidden border-b border-neutral-700 w-full col-span-1">
-          <div className="w-full flex items-center">
-            <div className="w-1/2 h-32 overflow-hidden relative border border-neutral-700 border-b-0 border-r-0 space-y-1">
-             <StripedPattern />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
+        <div className="h-80 sm:h-96 md:h-[600px] relative overflow-hidden border-b border-neutral-700 w-full">
+          <div className="w-full flex flex-col sm:flex-row items-center">
+            <div className="w-full sm:w-1/2 h-28 sm:h-32 overflow-hidden relative border border-neutral-700 border-b-0 sm:border-b border-r-0 space-y-1">
+              <StripedPattern />
               <div className="absolute z-20 insert-0 space-y-1 p-3">
-                <h3 className="text-white font-medium text-xl">20+ servers available</h3>
-                <p className="text-xs text-neutral-400 font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae possimus quaerat fugit repudiandae odio.</p>
+                <h3 className="text-white font-medium text-base sm:text-xl">20+ servers available</h3>
+                <p className="text-xs text-neutral-400 font-thin line-clamp-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
               </div>
             </div>
-            <div className="w-1/2 h-32 overflow-hidden relative border border-neutral-700 border-b-0 space-y-1">
-             <StripedPattern />
+            <div className="w-full sm:w-1/2 h-28 sm:h-32 overflow-hidden relative border border-neutral-700 border-b-0 space-y-1">
+              <StripedPattern />
               <div className="absolute z-20 insert-0 space-y-1 p-3">
-                <h3 className="text-white font-medium text-xl">20+ servers available</h3>
-                <p className="text-xs text-neutral-400 font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae possimus quaerat fugit repudiandae odio.</p>
+                <h3 className="text-white font-medium text-base sm:text-xl">20+ servers available</h3>
+                <p className="text-xs text-neutral-400 font-thin line-clamp-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
               </div>
             </div>
           </div>
@@ -68,16 +68,16 @@ const Features = () => {
         <Image src={FeaturesImage2} alt='Features Image 2' className='w-full col-span-1 my-auto block h-auto object-cover' width={720} height={720} />
       </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-8'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 py-8'>
         {MAIN_FEATURES.map((feature, idx) => {
           const Icon = feature.icon
           return (
-            <div key={idx} className='p-6 bg-neutral-900/50 border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/70 transition' >
+            <div key={idx} className='p-4 sm:p-6 bg-neutral-900/50 border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/70 transition' >
               <div className='flex items-center gap-3 mb-4'>
                 <Icon className='w-5 h-5 text-blue-400' />
-                <h4 className='font-semibold text-white'>{feature.title}</h4>
+                <h4 className='font-semibold text-white text-sm sm:text-base'>{feature.title}</h4>
               </div>
-              <p className='text-neutral-400 text-sm leading-relaxed'>
+              <p className='text-neutral-400 text-xs sm:text-sm leading-relaxed'>
                 {feature.description}
               </p>
             </div>

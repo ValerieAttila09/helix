@@ -7,7 +7,7 @@ import React from 'react';
 
 const page = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-black pt-14">
       <HeroSection />
       <AboutSection />
       <Features />
