@@ -21,7 +21,7 @@ const FAQSection: React.FC = () => {
         height: el.scrollHeight,
         duration: 0.25,
         ease: 'power2.out',
-        onComplete: () => gsap.set(el, { height: 'auto' })
+        onComplete: () => { gsap.set(el, { height: 'auto' }) }
       });
       setOpenIndex(index)
     }
@@ -58,7 +58,7 @@ const FAQSection: React.FC = () => {
               </button>
 
               <div
-                ref={(el) => (contentRefs.current[i] = el)}
+                ref={(el) => { contentRefs.current[i] = el }}
                 style={{ height: 0, overflow: 'hidden' }}
                 className="px-3 sm:px-5 text-xs sm:text-sm text-neutral-300"
               >
