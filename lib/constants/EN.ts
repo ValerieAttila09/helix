@@ -1,3 +1,5 @@
+import { Shield, Zap, Globe, Lock } from 'lucide-react'
+
 const PRODUCT_SUBMENU = [
   {
     title: "DATABASE",
@@ -71,4 +73,36 @@ const NAVBAR_MENU = [
   { label: "Company", dropdown: true, subMenu: COMPANY_SUBMENU },
 ]
 
-export { NAVBAR_MENU };
+const MAIN_FEATURES = [
+  {
+    icon: Shield,
+    title: 'DDoS Protection',
+    description: 'Attacks are automatically detected and mitigated.',
+  },
+  {
+    icon: Zap,
+    title: 'Content Caching',
+    description: 'Static assets are cached at the edge, so your apps stays fast.',
+  },
+  {
+    icon: Lock,
+    title: 'SSL and TLS Certificates',
+    description: 'Cloud automatically provisions and renews SSL certificates for your apps.',
+  },
+  {
+    icon: Globe,
+    title: 'Load Balancing',
+    description: 'Cloud automatically balances traffic as your apps scale.',
+  },
+];
+
+const FAQS_DATA: FAQItem[] = [
+  { q: 'Is there a free version?', a: 'Yes — we offer a free tier with limited features so you can try the product.' },
+  { q: 'What apps can I integrate?', a: 'You can integrate with popular apps using our connectors and webhooks.' },
+  { q: 'How does the AI work?', a: 'Our AI analyzes your input and generates suggestions using trained models.' },
+  { q: 'Can I use this with a team?', a: 'Yes — invite teammates, manage roles, and collaborate in shared workspaces.' },
+  { q: 'Is my data safe?', a: 'We use industry-standard encryption and access controls to protect your data.' },
+  { q: 'How do I manage my subscription?', a: 'Visit the billing page in your account settings to update or cancel subscriptions.' },
+];
+
+export { NAVBAR_MENU, MAIN_FEATURES, FAQS_DATA };

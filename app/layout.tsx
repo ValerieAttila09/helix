@@ -20,12 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${googleSans.className} relative antialiased bg-foreground`}
+        className={`${googleSans.className} relative antialiased bg-foreground overflow-x-hidden`}
       >
         <Navbar />
-        <div className="">
+        <main className="w-full">
           {children}
-        </div>
+        </main>
       </body>
     </html>
   );
