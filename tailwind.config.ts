@@ -1,8 +1,9 @@
+
 import type { Config } from "tailwindcss";
 import tailwindcssAnimate from "tailwindcss-animate";
 
 const config = {
-  darkMode: ["class", ""],
+  darkMode: "class",
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -19,6 +20,11 @@ const config = {
       },
     },
     extend: {
+      colors: {
+        background: "#0A0A0A",
+        foreground: "#FFFFFF",
+        "muted-foreground": "#888888",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -41,7 +47,8 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "marquee": "marquee var(--duration, 40s) linear infinite",
-        "marquee-vertical": "marquee-vertical var(--duration, 40s) linear infinite",
+        "marquee-vertical":
+          "marquee-vertical var(--duration, 40s) linear infinite",
       },
     },
   },

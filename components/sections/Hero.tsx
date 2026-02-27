@@ -56,7 +56,7 @@ const HeroSection = () => {
           </div>
           <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
             <Marquee className="[--duration:30s]">
-              {Icons.map((data, i) => {
+              {Icons.map((data) => {
                 return (
                   <div key={data.label} className="p-2 sm:p-4">
                     <Image src={data.icon} alt={data.label} className='h-6 sm:h-8 w-auto' width={56} height={56} />

@@ -3,7 +3,6 @@
 import { MAIN_FEATURES, FEATURES_SECTION } from '@/lib/constants/EN';
 import Image from 'next/image';
 import React from 'react'
-import FeaturesImage1 from "../../assets/images/edge-network-XOAgynsg (1).png";
 import FeaturesImage2 from "../../assets/images/helix-card-asset.png";
 import { Globe } from '../ui/globe';
 import { StripedPattern } from '../magicui/striped-pattern';

@@ -18,9 +18,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
-        className={`${googleSans.className} relative antialiased bg-foreground overflow-x-hidden`}
+        className={`${googleSans.className} relative antialiased bg-background text-neutral-200 overflow-x-hidden`}
       >
         <Navbar />
         <main className="w-full">

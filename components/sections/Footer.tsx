@@ -2,6 +2,7 @@ import React from 'react'
 import { Github, Linkedin, Facebook, Twitter } from 'lucide-react'
 import Link from 'next/link'
 import { FOOTER_SECTION } from '@/lib/constants/EN'
+import { UrlObject } from 'url'
 
 const Footer = () => {
   const socialLinks = [
@@ -24,7 +25,7 @@ const Footer = () => {
             </div>
 
             <div className='flex items-center gap-4 mb-8'>
-              {socialLinks.map((social, idx) => {
+              {socialLinks.map((social: { icon: any; href: string | UrlObject; label: string | undefined }, idx: React.Key | null | undefined) => {
                 const Icon = social.icon
                 return (
                   <Link

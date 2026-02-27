@@ -6,7 +6,7 @@ import React from 'react';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { NavMenuItem, SubmenuItem, SubmenuSection } from '@/types/interfaces';
-import { X, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 interface MobileSidebarProps {
   isOpen: boolean;
@@ -16,7 +16,6 @@ interface MobileSidebarProps {
 const MobileSidebar = ({ isOpen, onClose }: MobileSidebarProps) => {
   const sidebarRef = React.useRef<HTMLDivElement>(null);
   const overlayRef = React.useRef<HTMLDivElement>(null);
-  const expandedMenus = React.useRef<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = React.useState<Set<string>>(new Set());
 
   useGSAP(() => {
