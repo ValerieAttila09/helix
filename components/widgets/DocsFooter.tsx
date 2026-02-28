@@ -41,7 +41,7 @@ const footerSections = {
 export default function DocsFooter() {
   return (
     <footer className="border-t border-neutral-800 mt-16 pt-16 pb-10">
-      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
           <div className="col-span-2 md:col-span-4 lg:col-span-2 pr-8">
             <Link href="/" className="flex items-center gap-2 mb-4">
@@ -68,10 +68,10 @@ export default function DocsFooter() {
         </div>
         <div className="mt-16 pt-8 border-t border-neutral-800 flex justify-between items-center">
           <div className="flex gap-4 items-center">
-            <div className="flex items-center gap-1 p-1 rounded-md bg-neutral-900 border border-neutral-700">
-                <button className="p-1 rounded-sm text-neutral-400 hover:bg-neutral-800 hover:text-white"><Monitor size={16} /></button>
-                <button className="p-1 rounded-sm text-neutral-400 hover:bg-neutral-800 hover:text-white"><Sun size={16} /></button>
-                <button className="p-1 rounded-sm text-neutral-400 hover:bg-neutral-800 hover:text-white"><Moon size={16} /></button>
+            <div className="flex items-center gap-1 p-1 rounded-none bg-neutral-900 border border-neutral-700">
+                <button className="p-1 rounded-none text-neutral-400 border border-transparent hover:bg-neutral-800 hover:border-neutral-700 hover:text-white"><Monitor size={16} /></button>
+                <button className="p-1 rounded-none text-neutral-400 border border-transparent hover:bg-neutral-800 hover:border-neutral-700 hover:text-white"><Sun size={16} /></button>
+                <button className="p-1 rounded-none text-neutral-400 border border-transparent hover:bg-neutral-800 hover:border-neutral-700 hover:text-white"><Moon size={16} /></button>
             </div>
             <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-500"></span>

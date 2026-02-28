@@ -9,7 +9,7 @@ export function DocsSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="hidden md:block w-64 shrink-0 h-full overflow-y-auto pr-8 py-10 mt-[87px]">
+    <aside className="hidden md:block w-64 px-8 shrink-0 h-full overflow-y-auto py-10 mt-[87px] border-r border-neutral-800">
       <ul className="space-y-6">
         {Object.entries(DOCS_SIDEBAR_LINKS).map(([title, links]) => (
           <li key={title}>

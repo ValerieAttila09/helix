@@ -34,7 +34,7 @@ const FAQSection: React.FC = () => {
           <div className="inline-flex items-center gap-3 mb-4">
             <span className="text-xs bg-neutral-900 text-neutral-300 rounded-full px-3 py-0.5 border border-neutral-700">FAQ</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-semibold leading-tight text-background">Everything You Need to Know</h2>
+          <h2 className="text-4xl lg:text-5xl font-semibold leading-tight text-white">Everything You Need to Know</h2>
           <p className="text-sm text-neutral-400 mt-3">Looking for quick answers? Check out our FAQ section.</p>
         </div>
 
