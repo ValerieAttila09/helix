@@ -124,103 +124,103 @@ const Navbar = () => {
     }
   };
 
-  if (isDocsPage) {
-    return (
-      <>
-        <div className="fixed top-0 z-50 inset-x-0 w-full h-auto bg-black border-b border-neutral-800">
-          <div className="border-b border-neutral-800">
-            <div className="flex items-center justify-between h-full px-4 py-3 sm:px-6 lg:px-8 max-w-[90rem] mx-auto">
-              <div className="flex items-center gap-6">
-                <Link href="/" className="flex items-center gap-2">
-                  <svg role="img" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="text-white"><path d="M12.0002 1.99219L22.2859 7.99609V20.0039L12.0002 14.0078L1.71448 20.0039V7.99609L12.0002 1.99219Z M12.0002 15.6836L20.2701 20.5547V8.54688L12.0002 13.418L3.73021 8.54688V20.5547L12.0002 15.6836Z"></path></svg>
-                  <span className="text-white font-semibold hidden sm:inline-block">NEON</span>
-                  <span className="text-neutral-400 font-medium hidden sm:inline-block">Docs</span>
-                </Link>
-              </div>
-              <div className="flex-1 flex justify-center px-8 hidden md:flex">
-                <Button variant="outline" className="w-full max-w-md justify-start rounded-none text-neutral-400 bg-neutral-900 border-neutral-700 hover:bg-neutral-800 hover:text-neutral-300">
-                  <Search className="h-4 w-4 mr-2 text-neutral-500" />
-                  Search...
-                  <div className="ml-auto text-xs text-neutral-500 border border-neutral-700 rounded-none px-1.5 py-0.5">⌘K</div>
-                </Button>
-                <Button variant="outline" className="ml-4 flex items-center gap-2 rounded-none border-neutral-700 hover:border-white hover:text-white text-neutral-300">
-                  <Sparkles className="h-4 w-4 text-purple-400" />
-                  Ask AI
-                </Button>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="hidden md:flex items-center gap-4">
-                  <Link href="#" target="_blank"><Github className="h-5 w-5 text-neutral-400 hover:text-white" /></Link>
-                  <div className="h-6 w-px bg-neutral-800" />
-                  <Button variant="ghost" className="rounded-none border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-800 text-neutral-200 hover:text-white">Log in</Button>
-                  <Button className="rounded-none bg-white text-black hover:bg-neutral-200">Sign up</Button>
-                </div>
-                <div className="md:hidden">
-                  <button
-                    onClick={() => setMobileSidebarOpen(!isMobileSidebarOpen)}
-                    className="p-2 hover:bg-neutral-900 rounded-none transition-colors"
-                  >
-                    <Menu className="size-6 text-neutral-200" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="max-w-[90rem] block bg-black mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="w-full flex items-center justify-center h-auto py-1">
-              <div className="flex items-center space-x-4">
-                {links.map((link) => (
-                  <div
-                    key={link.name}
-                    className="relative p-2 cursor-pointer"
-                    onMouseEnter={() => link.dropdown && setOpenDropdown(link.name)}
-                  >
-                    <Link
-                      href={link.href}
-                      className={cn(
-                        "flex items-center text-sm font-medium transition-colors",
-                        pathname.includes(link.href) ? "text-white" : "text-neutral-400 hover:text-white"
-                      )}
-                    >
-                      <span>{link.name}</span>
-                      {link.dropdown && <ChevronDown className={cn("w-4 h-4 ml-1 transition-transform", openDropdown === link.name ? 'rotate-180' : '')} />}
-                    </Link>
-                    {link.dropdown && openDropdown === link.name && (
-                      <div className="absolute top-full left-0 mt-2 z-50">
-                        {link.name === 'Develop' ? (
-                          <div className="w-[30rem] bg-neutral-900 border border-neutral-800 rounded-none shadow-lg p-4">
-                            <div className="grid grid-cols-2 gap-x-4">
-                              {Object.entries(developMenuItems).map(([section, items]) => (
-                                <div key={section} className="mb-4 last:mb-0">
-                                  <h3 className="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-3">{section}</h3>
-                                  <div className="flex flex-col gap-1">
-                                    {items.map(item => (
-                                      <Link href="#" key={item.name} className="flex items-center gap-2 px-2 py-1 rounded-none border border-transparent hover:border-neutral-700 hover:bg-neutral-800 transition-all">
-                                        {item.icon}
-                                        <span className="text-sm text-neutral-300">{item.name}</span>
-                                      </Link>
-                                    ))}
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        ) : dummyDropdown}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-        <MobileSidebar
-          isOpen={isMobileSidebarOpen}
-          onClose={() => setMobileSidebarOpen(false)}
-        />
-      </>
-    )
-  }
+  // if (isDocsPage) {
+  //   return (
+  //     <>
+  //       <div className="fixed top-0 z-50 inset-x-0 w-full h-auto bg-black border-b border-neutral-800">
+  //         <div className="border-b border-neutral-800">
+  //           <div className="flex items-center justify-between h-full px-4 py-3 sm:px-6 lg:px-8 max-w-[90rem] mx-auto">
+  //             <div className="flex items-center gap-6">
+  //               <Link href="/" className="flex items-center gap-2">
+  //                 <svg role="img" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="text-white"><path d="M12.0002 1.99219L22.2859 7.99609V20.0039L12.0002 14.0078L1.71448 20.0039V7.99609L12.0002 1.99219Z M12.0002 15.6836L20.2701 20.5547V8.54688L12.0002 13.418L3.73021 8.54688V20.5547L12.0002 15.6836Z"></path></svg>
+  //                 <span className="text-white font-semibold hidden sm:inline-block">NEON</span>
+  //                 <span className="text-neutral-400 font-medium hidden sm:inline-block">Docs</span>
+  //               </Link>
+  //             </div>
+  //             <div className="flex-1 flex justify-center px-8 hidden md:flex">
+  //               <Button variant="outline" className="w-full max-w-md justify-start rounded-none text-neutral-400 bg-neutral-900 border-neutral-700 hover:bg-neutral-800 hover:text-neutral-300">
+  //                 <Search className="h-4 w-4 mr-2 text-neutral-500" />
+  //                 Search...
+  //                 <div className="ml-auto text-xs text-neutral-500 border border-neutral-700 rounded-none px-1.5 py-0.5">⌘K</div>
+  //               </Button>
+  //               <Button variant="outline" className="ml-4 flex items-center gap-2 rounded-none border-neutral-700 hover:border-white hover:text-white text-neutral-300">
+  //                 <Sparkles className="h-4 w-4 text-purple-400" />
+  //                 Ask AI
+  //               </Button>
+  //             </div>
+  //             <div className="flex items-center gap-4">
+  //               <div className="hidden md:flex items-center gap-4">
+  //                 <Link href="#" target="_blank"><Github className="h-5 w-5 text-neutral-400 hover:text-white" /></Link>
+  //                 <div className="h-6 w-px bg-neutral-800" />
+  //                 <Button variant="ghost" className="rounded-none border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-800 text-neutral-200 hover:text-white">Log in</Button>
+  //                 <Button className="rounded-none bg-white text-black hover:bg-neutral-200">Sign up</Button>
+  //               </div>
+  //               <div className="md:hidden">
+  //                 <button
+  //                   onClick={() => setMobileSidebarOpen(!isMobileSidebarOpen)}
+  //                   className="p-2 hover:bg-neutral-900 rounded-none transition-colors"
+  //                 >
+  //                   <Menu className="size-6 text-neutral-200" />
+  //                 </button>
+  //               </div>
+  //             </div>
+  //           </div>
+  //         </div>
+  //         <div className="max-w-[90rem] block bg-black mx-auto px-4 sm:px-6 lg:px-8">
+  //           <div className="w-full flex items-center justify-center h-auto py-1">
+  //             <div className="flex items-center space-x-4">
+  //               {links.map((link) => (
+  //                 <div
+  //                   key={link.name}
+  //                   className="relative p-2 cursor-pointer"
+  //                   onMouseEnter={() => link.dropdown && setOpenDropdown(link.name)}
+  //                 >
+  //                   <Link
+  //                     href={link.href}
+  //                     className={cn(
+  //                       "flex items-center text-sm font-medium transition-colors",
+  //                       pathname.includes(link.href) ? "text-white" : "text-neutral-400 hover:text-white"
+  //                     )}
+  //                   >
+  //                     <span>{link.name}</span>
+  //                     {link.dropdown && <ChevronDown className={cn("w-4 h-4 ml-1 transition-transform", openDropdown === link.name ? 'rotate-180' : '')} />}
+  //                   </Link>
+  //                   {link.dropdown && openDropdown === link.name && (
+  //                     <div className="absolute top-full left-0 mt-2 z-50">
+  //                       {link.name === 'Develop' ? (
+  //                         <div className="w-[30rem] bg-neutral-900 border border-neutral-800 rounded-none shadow-lg p-4">
+  //                           <div className="grid grid-cols-2 gap-x-4">
+  //                             {Object.entries(developMenuItems).map(([section, items]) => (
+  //                               <div key={section} className="mb-4 last:mb-0">
+  //                                 <h3 className="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-3">{section}</h3>
+  //                                 <div className="flex flex-col gap-1">
+  //                                   {items.map(item => (
+  //                                     <Link href="#" key={item.name} className="flex items-center gap-2 px-2 py-1 rounded-none border border-transparent hover:border-neutral-700 hover:bg-neutral-800 transition-all">
+  //                                       {item.icon}
+  //                                       <span className="text-sm text-neutral-300">{item.name}</span>
+  //                                     </Link>
+  //                                   ))}
+  //                                 </div>
+  //                               </div>
+  //                             ))}
+  //                           </div>
+  //                         </div>
+  //                       ) : dummyDropdown}
+  //                     </div>
+  //                   )}
+  //                 </div>
+  //               ))}
+  //             </div>
+  //           </div>
+  //         </div>
+  //       </div>
+  //       <MobileSidebar
+  //         isOpen={isMobileSidebarOpen}
+  //         onClose={() => setMobileSidebarOpen(false)}
+  //       />
+  //     </>
+  //   )
+  // }
 
   return (
     <>

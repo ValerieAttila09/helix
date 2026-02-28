@@ -5,6 +5,8 @@ import { ChevronDown, Code, Languages, Database, DatabaseZap, Key, Lock, BrainCi
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useIsMobile } from "@/hooks/use-mobile";
+import MobileSubNav from "./MobileSubNav";
 
 const links = [
   { name: "Get started", href: "/docs" },
@@ -53,18 +55,31 @@ const dummyDropdown = (
 export default function DocsSubNav() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return (
+      <div className="fixed bottom-0 inset-x-0 w-full z-40 bg-black border-t border-neutral-800">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-start h-14">
+            <MobileSubNav />
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div 
-      className="sticky top-16 z-40 bg-black/70 backdrop-blur-md border-b border-neutral-800"
+    <div
+      className="fixed top-16 z-40 bg-black/70 backdrop-blur-md border-b border-neutral-800"
       onMouseLeave={() => setOpenDropdown(null)}
     >
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
           <div className="flex items-center space-x-6">
             {links.map((link) => (
-              <div 
-                key={link.name} 
+              <div
+                key={link.name}
                 className="relative"
                 onMouseEnter={() => link.dropdown && setOpenDropdown(link.name)}
               >
