@@ -20,10 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${googleSans.className} relative antialiased bg-background text-neutral-200 overflow-x-hidden`}
+        className={`${googleSans.className} relative antialiased bg-background text-neutral-200`}
       >
         <Navbar />
-        <main className="w-full">
+        <main className="w-full h-screen">
           {children}
         </main>
       </body>

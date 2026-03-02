@@ -28,7 +28,7 @@ const guides = [
 
 export default function DocsPage() {
   return (
-    <div className="py-8 px-4 sm:px-6 lg:px-8 mt-[102px]">
+    <div className="py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <section>
           <h2 className="text-2xl font-semibold mb-4">Quickstart prompts</h2>

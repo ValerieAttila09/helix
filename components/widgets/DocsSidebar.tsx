@@ -9,11 +9,11 @@ export function DocsSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="hidden md:block w-64 px-8 shrink-0 h-full overflow-y-auto py-10 border-r border-neutral-800">
+    <aside className="hidden md:block w-64 px-8 shrink-0 overflow-y-auto py-10 border-r border-neutral-800">
       <ul className="space-y-6">
         {Object.entries(DOCS_SIDEBAR_LINKS).map(([title, links]) => (
           <li key={title}>
-            <h4 className="mb-2 font-semibold text-neutral-400">{title}</h4>
+            <h4 className="mb-2 font-semibold text-neutral-400 sticky top-0 bg-black py-2">{title}</h4>
             <ul className="border-l border-neutral-800">
               {links.map(({ title, href }) => (
                 <li key={href}>

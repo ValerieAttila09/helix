@@ -21,35 +21,33 @@ export default function DocsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col min-h-screen bg-black text-white">
+    <div className="flex flex-col h-screen bg-black text-white">
       <Navbar />
       <DocsSubNav />
-      <div className="relative flex flex-1 max-w-[90rem] mx-auto w-full">
+      <div className="flex flex-1 overflow-hidden max-w-[90rem] mx-auto w-full">
         <DocsSidebar />
-        <div className="flex-1 flex flex-col overflow-hidden">
-          <main className="flex-1 overflow-y-auto py-10 lg:pl-8">
+        <div className="flex-1 overflow-y-auto">
+          <main className="py-10 md:px-8">
             {children}
             <DocsFooter />
           </main>
         </div>
-        <div className="hidden md:block w-64 shrink-0 border-l border-neutral-800">
-          <div className="h-full overflow-y-auto py-10 px-4">
-            <div className="sticky top-28">
-              <h3 className="text-sm font-semibold text-neutral-400 mb-4">On this page</h3>
-              <ul className="space-y-3">
-                {actionItems.map((item, index) => (
-                  <li key={index}>
-                    <Link href="#" className="flex items-center gap-3 text-sm text-neutral-400 hover:text-white transition-colors group">
-                      <span className="w-5 h-5 flex items-center justify-center">{item.icon}</span>
-                      <span className="flex-1">{item.text}</span>
-                      {item.external && (
-                        <ExternalLink size={14} className="text-neutral-500 group-hover:text-white" />
-                      )}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div className="hidden md:block w-64 shrink-0 border-l border-neutral-800 overflow-y-auto">
+          <div className="py-10 px-4">
+            <h3 className="text-sm font-semibold text-neutral-400 mb-4 sticky top-0 bg-black py-2">On this page</h3>
+            <ul className="space-y-3">
+              {actionItems.map((item, index) => (
+                <li key={index}>
+                  <Link href="#" className="flex items-center gap-3 text-sm text-neutral-400 hover:text-white transition-colors group">
+                    <span className="w-5 h-5 flex items-center justify-center">{item.icon}</span>
+                    <span className="flex-1">{item.text}</span>
+                    {item.external && (
+                      <ExternalLink size={14} className="text-neutral-500 group-hover:text-white" />
+                    )}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
