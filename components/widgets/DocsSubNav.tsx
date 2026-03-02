@@ -45,7 +45,7 @@ const developMenuItems = {
 };
 
 const dummyDropdown = (
-  <div className="w-48 bg-[#151515] border border-neutral-800 rounded-md shadow-lg p-2">
+  <div className="w-48 bg-[#151515] border border-neutral-800 rounded-none shadow-lg p-2">
     <p className="text-neutral-400 text-sm p-2">Dummy Dropdown</p>
     <Link href="#" className="block px-2 py-1 text-sm text-neutral-300 hover:bg-neutral-700 rounded">Item 1</Link>
     <Link href="#" className="block px-2 py-1 text-sm text-neutral-300 hover:bg-neutral-700 rounded">Item 2</Link>
@@ -71,11 +71,11 @@ export default function DocsSubNav() {
 
   return (
     <div
-      className="fixed top-16 z-40 bg-black/70 backdrop-blur-md border-b border-neutral-800"
+      className="fixed top-[56px] inset-x-0 z-40 bg-black/70 backdrop-blur-md border-b border-neutral-800"
       onMouseLeave={() => setOpenDropdown(null)}
     >
-      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14">
+      <div className="max-w-[90rem] mx-auto px-4 sm:px-8">
+        <div className="flex items-center justify-between h-auto py-5">
           <div className="flex items-center space-x-6">
             {links.map((link) => (
               <div
@@ -96,7 +96,7 @@ export default function DocsSubNav() {
                 {link.dropdown && openDropdown === link.name && (
                   <div className="absolute top-full left-0 mt-2 z-50">
                     {link.name === 'Develop' ? (
-                      <div className="w-[30rem] bg-[#151515] border border-neutral-800 rounded-lg shadow-lg p-4">
+                      <div className="w-[30rem] bg-[#151515] border border-neutral-800 rounded-none shadow-lg p-4">
                         <div className="grid grid-cols-2 gap-x-4">
                           {Object.entries(developMenuItems).map(([section, items]) => (
                             <div key={section} className="mb-4 last:mb-0">

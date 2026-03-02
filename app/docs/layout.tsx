@@ -24,7 +24,7 @@ export default function DocsLayout({
     <div className="flex flex-col min-h-screen bg-black text-white">
       <Navbar />
       <DocsSubNav />
-      <div className="flex flex-1 max-w-[90rem] mx-auto w-full">
+      <div className="relative flex flex-1 max-w-[90rem] mx-auto w-full">
         <DocsSidebar />
         <div className="flex-1 flex flex-col overflow-hidden">
           <main className="flex-1 overflow-y-auto py-10 lg:pl-8">
@@ -32,7 +32,7 @@ export default function DocsLayout({
             <DocsFooter />
           </main>
         </div>
-        <div className="hidden xl:block w-64 shrink-0 border-l border-neutral-800">
+        <div className="hidden md:block w-64 shrink-0 border-l border-neutral-800">
           <div className="h-full overflow-y-auto py-10 px-4">
             <div className="sticky top-28">
               <h3 className="text-sm font-semibold text-neutral-400 mb-4">On this page</h3>
