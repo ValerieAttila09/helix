@@ -84,7 +84,7 @@ const Navbar = () => {
     return (
       <>
         <div className="fixed top-0 z-50 inset-x-0 w-full h-auto bg-black border-b border-neutral-800">
-          <div className="flex items-center justify-between h-full px-4 py-3 sm:px-6 lg:px-8 max-w-[90rem] mx-auto">
+          <div className="flex items-center justify-between h-full px-4 py-[7.5px] sm:px-6 lg:px-8 max-w-[90rem] mx-auto">
             <div className="flex items-center gap-6">
               <Link href="/" className="flex items-center gap-2">
                 <h1 className="text-2xl font-bold text-white">helix</h1>

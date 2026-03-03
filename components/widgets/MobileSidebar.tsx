@@ -70,7 +70,7 @@ const MobileSidebar = ({ isOpen, onClose }: MobileSidebarProps) => {
 
       <div
         ref={sidebarRef}
-        className="fixed top-[65px] left-0 h-screen w-80 bg-black border-r border-neutral-800 z-50 overflow-y-auto translate-x-full"
+        className="fixed top-[56px] left-0 h-screen w-80 bg-black border-r border-neutral-800 z-50 overflow-y-auto translate-x-full"
       >
         <div className="p-4 space-y-4">
           {NAVBAR_MENU.map((item: NavMenuItem, idx) => (
@@ -131,7 +131,7 @@ const MobileSidebar = ({ isOpen, onClose }: MobileSidebarProps) => {
             <button className="w-full p-3 text-neutral-200 border border-neutral-600 hover:bg-neutral-900 transition-colors">
               Login
             </button>
-            <button className="w-full p-3 text-foreground  bg-neutral-200 hover:bg-neutral-300 transition-colors font-medium">
+            <button className="w-full p-3 text-black bg-neutral-200 hover:bg-neutral-300 transition-colors font-medium">
               Sign Up
             </button>
           </div>
