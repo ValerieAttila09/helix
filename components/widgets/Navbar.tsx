@@ -133,7 +133,7 @@ const Navbar = () => {
         isOpen={isMobileSidebarOpen}
         onClose={() => setMobileSidebarOpen(false)}
       />
-      <div ref={navbarWidgetRef} onMouseLeave={closeNavbar} className="fixed top-0 z-50 inset-x-0 w-full h-14 bg-black backdrop-blur-sm border-b border-neutral-500/50 overflow-hidden">
+      <div ref={navbarWidgetRef} onMouseLeave={closeNavbar} className="fixed top-0 z-50 inset-x-0 w-full h-14 bg-black/25 backdrop-blur-sm border-b border-neutral-500/50 overflow-hidden">
         <div className="w-full space-y-4">
           <div className="w-full h-auto flex items-start py-2 px-4 sm:px-6 md:px-8 justify-between">
             <div className="flex items-center gap-6 sm:gap-10 md:gap-14">

@@ -71,7 +71,7 @@ export default function DocsSubNav() {
 
   return (
     <div
-      className="fixed top-[56px] inset-x-0 z-40 bg-black/70 backdrop-blur-md border-b border-neutral-800"
+      className="fixed top-[53px] inset-x-0 z-40 bg-black/70 backdrop-blur-md border-b border-neutral-800"
       onMouseLeave={() => setOpenDropdown(null)}
     >
       <div className="max-w-[90rem] mx-auto px-4 sm:px-8">

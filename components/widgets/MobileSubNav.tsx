@@ -69,10 +69,10 @@ const developMenuItems = {
 };
 
 const dummyDropdown = (
-	<div className="w-full bg-[#151515] border border-neutral-800 rounded-md shadow-lg p-2">
-		<p className="text-neutral-400 text-sm p-2">Dummy Dropdown</p>
-		<Link href="#" className="block px-2 py-1 text-sm text-neutral-300 hover:bg-neutral-700 rounded">Item 1</Link>
-		<Link href="#" className="block px-2 py-1 text-sm text-neutral-300 hover:bg-neutral-700 rounded">Item 2</Link>
+	<div className="w-full">
+		<h1 className="text-neutral-400 font-medium text-lg">Dummy Dropdown</h1>
+		<Link href="#" className="block my-2 px-2 py-1 text-md text-neutral-300 hover:bg-neutral-700 rounded">Item Number 1</Link>
+		<Link href="#" className="block px-2 py-1 text-md text-neutral-300 hover:bg-neutral-700 rounded">Item Number 2</Link>
 	</div>
 );
 
