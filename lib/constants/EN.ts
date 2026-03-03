@@ -220,6 +220,7 @@ const FOOTER_SECTION = {
   statusMessage: "All systems operational"
 }
 
+
 export {
   NAVBAR_MENU,
   MAIN_FEATURES,

@@ -28,7 +28,7 @@ const guides = [
 
 export default function DocsPage() {
   return (
-    <div className="py-8 px-4 sm:px-6 lg:px-8">
+    <div className="py-8 px-4 sm:px-6 lg:px-8 mt-4 sm:mt-18">
       <div className="max-w-5xl mx-auto">
         <section>
           <h2 className="text-2xl font-semibold mb-4">Quickstart prompts</h2>
@@ -42,7 +42,7 @@ export default function DocsPage() {
             ))}
           </div>
           <div className="mt-4 text-center">
-            <button className="text-sm text-blue-500 hover:underline">
+            <button className="text-sm text-fuchsia-500 cursor-pointer hover:underline">
               Show more
             </button>
           </div>

@@ -70,7 +70,7 @@ const MobileSidebar = ({ isOpen, onClose }: MobileSidebarProps) => {
 
       <div
         ref={sidebarRef}
-        className="fixed top-14 left-0 h-screen w-80 bg-black border-r border-neutral-700 z-50 overflow-y-auto translate-x-full"
+        className="fixed top-[65px] left-0 h-screen w-80 bg-black border-r border-neutral-800 z-50 overflow-y-auto translate-x-full"
       >
         <div className="p-4 space-y-4">
           {NAVBAR_MENU.map((item: NavMenuItem, idx) => (

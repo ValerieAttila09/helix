@@ -75,7 +75,7 @@ export default function DocsSubNav() {
       onMouseLeave={() => setOpenDropdown(null)}
     >
       <div className="max-w-[90rem] mx-auto px-4 sm:px-8">
-        <div className="flex items-center justify-between h-auto py-5">
+        <div className="flex items-center justify-between h-auto">
           <div className="flex items-center space-x-6">
             {links.map((link) => (
               <div
@@ -86,13 +86,14 @@ export default function DocsSubNav() {
                 <Link
                   href={link.href}
                   className={cn(
-                    "flex items-center text-sm font-medium transition-colors",
-                    pathname.includes(link.href) ? "text-white" : "text-neutral-400 hover:text-white"
+                    "flex items-center text-sm font-normal transition-colors py-4",
+                    pathname.includes(link.href) ? "text-white border-b border-white" : "text-neutral-400 hover:text-white"
                   )}
                 >
                   <span>{link.name}</span>
                   {link.dropdown && <ChevronDown className={cn("w-4 h-4 ml-1 transition-transform", openDropdown === link.name ? 'rotate-180' : '')} />}
                 </Link>
+
                 {link.dropdown && openDropdown === link.name && (
                   <div className="absolute top-full left-0 mt-2 z-50">
                     {link.name === 'Develop' ? (

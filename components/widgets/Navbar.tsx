@@ -12,50 +12,6 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
-const links = [
-  { name: "Get started", href: "/docs" },
-  { name: "About", href: "/docs/about" },
-  { name: "Connect", href: "/docs/connect", dropdown: true },
-  { name: "Develop", href: "/docs/develop", dropdown: true },
-  { name: "Manage", href: "/docs/manage", dropdown: true },
-  { name: "Postgres", href: "/docs/postgres", dropdown: true },
-  { name: "Resources", href: "/docs/resources", dropdown: true },
-  { name: "Platform integration", href: "/docs/platform-integration" },
-];
-
-const developMenuItems = {
-  "FRONTEND & FRAMEWORKS": [
-    { name: "Frameworks", icon: <Code size={16} /> },
-    { name: "Languages", icon: <Languages size={16} /> },
-    { name: "ORMs", icon: <Database size={16} /> },
-  ],
-  "BACKEND": [
-    { name: "Data API", icon: <DatabaseZap size={16} /> },
-    { name: "Neon Auth", icon: <Key size={16} /> },
-    { name: "Postgres RLS", icon: <Lock size={16} /> },
-  ],
-  "AI": [
-    { name: "AI for Agents", icon: <BrainCircuit size={16} /> },
-    { name: "AI App Starter Kit", icon: <Sparkles size={16} /> },
-  ],
-  "TOOLS & WORKFLOWS": [
-    { name: "API, CLI & SDKs", icon: <TerminalSquare size={16} /> },
-    { name: "Local development", icon: <Laptop size={16} /> },
-    { name: "Integrations (3rd party)", icon: <Puzzle size={16} /> },
-    { name: "Workflows & CI/CD", icon: <GitMerge size={16} /> },
-    { name: "Templates", icon: <FileText size={16} /> },
-    { name: "Examples repo", icon: <Github size={16} /> },
-  ],
-};
-
-const dummyDropdown = (
-  <div className="w-48 bg-neutral-900 border border-neutral-800 rounded-none shadow-lg p-2">
-    <p className="text-neutral-400 text-sm p-2">Dummy Dropdown</p>
-    <Link href="#" className="block px-2 py-1 text-sm text-neutral-300 hover:bg-neutral-800 border border-transparent hover:border-neutral-700 rounded-none transition-all">Item 1</Link>
-    <Link href="#" className="block px-2 py-1 text-sm text-neutral-300 hover:bg-neutral-800 border border-transparent hover:border-neutral-700 rounded-none transition-all">Item 2</Link>
-  </div>
-);
-
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
@@ -131,9 +87,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-full px-4 py-3 sm:px-6 lg:px-8 max-w-[90rem] mx-auto">
             <div className="flex items-center gap-6">
               <Link href="/" className="flex items-center gap-2">
-                <svg role="img" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="text-white"><path d="M12.0002 1.99219L22.2859 7.99609V20.0039L12.0002 14.0078L1.71448 20.0039V7.99609L12.0002 1.99219Z M12.0002 15.6836L20.2701 20.5547V8.54688L12.0002 13.418L3.73021 8.54688V20.5547L12.0002 15.6836Z"></path></svg>
-                <span className="text-white font-semibold hidden sm:inline-block">NEON</span>
-                <span className="text-neutral-400 font-medium hidden sm:inline-block">Docs</span>
+                <h1 className="text-2xl font-bold text-white">helix</h1>
               </Link>
             </div>
             <div className="flex-1 flex justify-center px-8 hidden md:flex">

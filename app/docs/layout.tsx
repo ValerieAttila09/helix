@@ -27,12 +27,12 @@ export default function DocsLayout({
       <div className="flex flex-1 overflow-hidden max-w-[90rem] mx-auto w-full">
         <DocsSidebar />
         <div className="flex-1 overflow-y-auto">
-          <main className="py-10 md:px-8">
+          <main className="py-10">
             {children}
             <DocsFooter />
           </main>
         </div>
-        <div className="hidden md:block w-64 shrink-0 border-l border-neutral-800 overflow-y-auto">
+        <div className="hidden lg:block w-64 sm:mt-24 shrink-0 border-l border-neutral-800 overflow-y-auto">
           <div className="py-10 px-4">
             <h3 className="text-sm font-semibold text-neutral-400 mb-4 sticky top-0 bg-black py-2">On this page</h3>
             <ul className="space-y-3">

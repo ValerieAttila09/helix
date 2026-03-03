@@ -2,8 +2,21 @@
 
 import Link from 'next/link';
 import { Github, Twitter, Linkedin, Youtube, Moon, Sun, Monitor } from 'lucide-react';
+import { JSX } from 'react';
 
-const footerSections = {
+const footerSections: {
+  Company: (
+    { name: string; href: string; dropdown?: undefined; icon?: JSX.Element; } |
+    { name: string; href: string; dropdown: boolean; icon?: JSX.Element; }
+  )[];
+  Resources: { name: string; href: string; icon?: JSX.Element; }[];
+  Community: { name: string; href: string; icon?: JSX.Element; }[];
+  Compliance: (
+    { name: string; href: string; dropdown?: undefined; icon?: JSX.Element; } |
+    { name: string; href: string; dropdown: boolean; icon?: JSX.Element; }
+  )[];
+}
+  = {
   Company: [
     { name: 'About', href: '#' },
     { name: 'Blog', href: '#' },
@@ -41,12 +54,12 @@ const footerSections = {
 export default function DocsFooter() {
   return (
     <footer className="border-t border-neutral-800 mt-16 pt-16 pb-10">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+      <div className="max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 px-4 sm:px-6 lg:px-8">
           <div className="col-span-2 md:col-span-4 lg:col-span-2 pr-8">
             <Link href="/" className="flex items-center gap-2 mb-4">
-                <svg role="img" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="text-white"><path d="M12.0002 1.99219L22.2859 7.99609V20.0039L12.0002 14.0078L1.71448 20.0039V7.99609L12.0002 1.99219Z M12.0002 15.6836L20.2701 20.5547V8.54688L12.0002 13.418L3.73021 8.54688V20.5547L12.0002 15.6836Z"></path></svg>
-                <span className="text-white font-semibold">NEON</span>
+              <svg role="img" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="text-white"><path d="M12.0002 1.99219L22.2859 7.99609V20.0039L12.0002 14.0078L1.71448 20.0039V7.99609L12.0002 1.99219Z M12.0002 15.6836L20.2701 20.5547V8.54688L12.0002 13.418L3.73021 8.54688V20.5547L12.0002 15.6836Z"></path></svg>
+              <span className="text-white font-semibold">NEON</span>
             </Link>
             <p className="text-neutral-400 text-sm">A Databricks Company</p>
           </div>
@@ -66,16 +79,16 @@ export default function DocsFooter() {
             </div>
           ))}
         </div>
-        <div className="mt-16 pt-8 border-t border-neutral-800 flex justify-between items-center">
+        <div className="mt-16 pt-8 px-4 sm:px-6 lg:px-8 border-t border-neutral-800 flex justify-between items-center">
           <div className="flex gap-4 items-center">
             <div className="flex items-center gap-1 p-1 rounded-none bg-neutral-900 border border-neutral-700">
-                <button className="p-1 rounded-none text-neutral-400 border border-transparent hover:bg-neutral-800 hover:border-neutral-700 hover:text-white"><Monitor size={16} /></button>
-                <button className="p-1 rounded-none text-neutral-400 border border-transparent hover:bg-neutral-800 hover:border-neutral-700 hover:text-white"><Sun size={16} /></button>
-                <button className="p-1 rounded-none text-neutral-400 border border-transparent hover:bg-neutral-800 hover:border-neutral-700 hover:text-white"><Moon size={16} /></button>
+              <button className="p-1 rounded-none text-neutral-400 border border-transparent hover:bg-neutral-800 hover:border-neutral-700 hover:text-white"><Monitor size={16} /></button>
+              <button className="p-1 rounded-none text-neutral-400 border border-transparent hover:bg-neutral-800 hover:border-neutral-700 hover:text-white"><Sun size={16} /></button>
+              <button className="p-1 rounded-none text-neutral-400 border border-transparent hover:bg-neutral-800 hover:border-neutral-700 hover:text-white"><Moon size={16} /></button>
             </div>
             <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                <span className="text-sm text-neutral-400">All systems operational</span>
+              <span className="w-2 h-2 rounded-full bg-green-500"></span>
+              <span className="text-sm text-neutral-400">All systems operational</span>
             </div>
           </div>
           <p className="text-sm text-neutral-500">Made in SF and the World. Copyright © 2022 – 2026 Neon, LLC</p>
